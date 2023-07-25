@@ -9,7 +9,7 @@ function App() {
     function handleLogin(e) {
         e.preventDefault();
 
-        username = e.target.username.value;
+        let username = e.target.username.value;
 
         fetch("/login", {
             method: "POST",
@@ -35,7 +35,7 @@ function App() {
             <h1>Login Form</h1>
             <form onSubmit = {handleLogin}>
                 <label>Username: </label>
-                <input type = "text" id = "username" value = {username} />
+                <input id = "username" type = "text" />
                 <button type = "submit">Login</button>
             </form>
 
@@ -44,3 +44,5 @@ function App() {
         </>
     )
 }
+
+export default App;
