@@ -6,6 +6,14 @@ function App() {
 
     console.log(user);
 
+    useEffect(() => {
+      fetch("/check_session").then((response) => {
+        if (response.ok) {
+          response.json().then((user) => setUser(user));
+        }
+      });
+     }, []);
+
     function handleLogin(e) {
         e.preventDefault();
 

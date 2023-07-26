@@ -4,6 +4,14 @@ from config import app
 
 from models import User
 
+@app.route("/check_session", methods = ['GET'])
+def check_session():
+
+    '''
+    1. Get current session (session.get('user_id'))
+    2. If user exists, return user; otherwise return 401 error.
+    '''
+
 @app.route("/login", methods = ['POST'])
 def login():
 
