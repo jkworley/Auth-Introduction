@@ -18,3 +18,17 @@ with app.app_context():
     db.session.add(user_2)
 
     db.session.commit()
+
+    user_1_password = 'mii'
+
+    user_2_password = 'p4ssw0rd'
+
+    user_1.password_hash = user_1_password
+
+    user_2.password_hash = user_2_password
+
+    db.session.add(user_1)
+
+    db.session.add(user_2)
+
+    db.session.commit()
